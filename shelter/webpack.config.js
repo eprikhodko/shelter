@@ -8,11 +8,14 @@ module.exports = {
     main: './src/pages/main/main.js',
     pets: './src/pages/pets/pets.js',
   },
+
   output: {
     filename: '[name].js',
     // __dirname means current directory, where webpack.config.js is located
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
@@ -30,14 +33,7 @@ module.exports = {
       chunks: ['pets'],
     }),
   ],
-  // module: {
-  //   rules: [
-  //     {
-  //       test: /\.(png|svg|jpg|jepg|gif)$/i,
-  //       type: 'asset/resource',
-  //     },
-  //   ],
-  // },
+
   module: {
     rules: [
       {
@@ -57,6 +53,7 @@ module.exports = {
       },
     ],
   },
+
   devServer: {
     watchFiles: ['src/**/*'],
   },
