@@ -10,9 +10,10 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
     // __dirname means current directory, where webpack.config.js is located
     path: path.resolve(__dirname, 'dist'),
+    // put images into /dist/assets folder
     assetModuleFilename: 'assets/[hash][ext][query]',
     clean: true,
   },
@@ -37,6 +38,11 @@ module.exports = {
 
   module: {
     rules: [
+      /* 
+      without html-loader images in html files won't load
+      with html-loader image src changes from <img src="../../assets/img/js-logo.png" alt="some alt" />
+      to <img src="assets/b591aaa85de6397b1e15.png" alt="some alt" />, and images load up fine 
+      */
       {
         test: /\.html$/i,
         loader: 'html-loader',
