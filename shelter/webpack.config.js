@@ -14,6 +14,7 @@ module.exports = {
     // __dirname means current directory, where webpack.config.js is located
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext][query]',
+    clean: true,
   },
 
   plugins: [
