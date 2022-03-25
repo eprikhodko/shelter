@@ -3,22 +3,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
 module.exports = {
-  mode: 'development',
   entry: {
     main: './src/pages/main/main.js',
     pets: './src/pages/pets/pets.js',
   },
-
-  output: {
-    filename: '[name].[contenthash].js',
-    // __dirname means current directory, where webpack.config.js is located
-    path: path.resolve(__dirname, 'dist'),
-    // put images into /dist/assets folder
-    assetModuleFilename: 'assets/[hash][ext][query]',
-    // clean: true,
-  },
-
-  devtool: 'source-map',
 
   plugins: [
     new MiniCssExtractPlugin({
@@ -71,16 +59,5 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
-  },
-
-  devServer: {
-    // watchFiles: ['src/**/*'],
-    open: true,
-    hot: true,
-    port: 'auto',
-    static: {
-      directory: './src',
-      watch: true,
-    },
   },
 };
