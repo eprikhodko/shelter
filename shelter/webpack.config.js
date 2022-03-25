@@ -1,23 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
 module.exports = {
   mode: 'development',
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: './src/pages/main/main.html',
-      // devserver dont work with filename property
-      filename: 'main.html',
-      chunks: ['main'],
-    }),
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: './src/pages/pets/pets.html',
-      filename: 'pets.html',
-      chunks: ['pets'],
-    }),
-  ],
   // entry: './src/pages/main/main.js',
   entry: {
     main: './src/pages/main/main.js',
@@ -28,6 +14,44 @@ module.exports = {
     filename: '[name].js',
     // __dirname means current directory, where webpack.config.js is located
     path: path.resolve(__dirname, 'dist'),
+  },
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/main/main.html',
+      filename: 'main.html',
+      chunks: ['main'],
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: './src/pages/pets/pets.html',
+      filename: 'pets.html',
+      chunks: ['pets'],
+    }),
+  ],
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.(png|svg|jpg|jepg|gif)$/i,
+  //       type: 'asset/resource',
+  //     },
+  //   ],
+  // },
+  module: {
+    rules: [
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          // Extract styles into a separate file
+          MiniCssExtractPlugin.loader,
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+    ],
   },
   devServer: {
     watchFiles: ['src/**/*'],
