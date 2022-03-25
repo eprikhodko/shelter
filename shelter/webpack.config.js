@@ -45,10 +45,10 @@ module.exports = {
       with html-loader image src changes from <img src="../../assets/img/js-logo.png" alt="some alt" />
       to <img src="assets/b591aaa85de6397b1e15.png" alt="some alt" />, and images load up fine 
       */
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },
+      // {
+      //   test: /\.html$/i,
+      //   loader: 'html-loader',
+      // },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
@@ -72,6 +72,13 @@ module.exports = {
   },
 
   devServer: {
-    watchFiles: ['src/**/*'],
+    // watchFiles: ['src/**/*'],
+    open: true,
+    hot: true,
+    port: 'auto',
+    static: {
+      directory: './src',
+      watch: true,
+    },
   },
 };
