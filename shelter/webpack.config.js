@@ -18,6 +18,8 @@ module.exports = {
     clean: true,
   },
 
+  devtool: 'source-map',
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
