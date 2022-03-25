@@ -15,7 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // put images into /dist/assets folder
     assetModuleFilename: 'assets/[hash][ext][query]',
-    clean: true,
+    // clean: true,
   },
 
   devtool: 'source-map',
@@ -45,15 +45,17 @@ module.exports = {
       with html-loader image src changes from <img src="../../assets/img/js-logo.png" alt="some alt" />
       to <img src="assets/b591aaa85de6397b1e15.png" alt="some alt" />, and images load up fine 
       */
-      // {
-      //   test: /\.html$/i,
-      //   loader: 'html-loader',
-      // },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          // Extract styles into a separate file
-          MiniCssExtractPlugin.loader,
+          // // Extract styles into a separate file
+          // MiniCssExtractPlugin.loader,
+          // Inject styles into DOM in <style> tag
+          'style-loader',
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
