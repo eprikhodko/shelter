@@ -1,3 +1,3 @@
 // import './scss/style.scss';
 
-console.log('hello, SASS');
+console.log('hello, this is pets page');
