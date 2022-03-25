@@ -4,19 +4,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 module.exports = {
   mode: 'development',
-  // entry: './src/pages/main/main.js',
   entry: {
     main: './src/pages/main/main.js',
     pets: './src/pages/pets/pets.js',
   },
   output: {
-    // filename: 'main.js',
     filename: '[name].js',
     // __dirname means current directory, where webpack.config.js is located
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
     new HtmlWebpackPlugin({
       inject: true,
       template: './src/pages/main/main.html',
@@ -50,6 +50,10 @@ module.exports = {
           // Compiles Sass to CSS
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
