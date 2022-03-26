@@ -6,17 +6,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = merge(common, {
   mode: 'production',
 
-  // disable minimization of js scripts
-  optimization: {
-    minimize: false,
-  },
-
   output: {
     filename: '[name].[contenthash].js',
     // __dirname means current directory, where webpack.config.js is located
     path: path.resolve(__dirname, 'dist'),
     // put images into /dist/assets folder
     assetModuleFilename: 'assets/[hash][ext][query]',
+    // clean up dist folder everytime we're make a build
     clean: true,
   },
 
@@ -42,5 +38,10 @@ module.exports = merge(common, {
         ],
       },
     ],
+  },
+
+  // disable minimization of js scripts
+  optimization: {
+    minimize: false,
   },
 });
