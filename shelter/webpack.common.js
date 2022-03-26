@@ -1,24 +1,24 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const path = require('path');
 module.exports = {
   entry: {
-    main: './src/pages/main/main.js',
+    index: './src/pages/main/main.js',
     pets: './src/pages/pets/pets.js',
   },
 
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
-    }),
     new HtmlWebpackPlugin({
+      // disable minimization of html files
+      minify: false,
       inject: true,
       template: './src/pages/main/main.html',
-      filename: 'main.html',
-      chunks: ['main'],
+      filename: 'index.html',
+      chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
+      // disable minimization of html files
+      minify: false,
       inject: true,
       template: './src/pages/pets/pets.html',
       filename: 'pets.html',
@@ -36,20 +36,12 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: 'html-loader',
+        // disable minimization of html files
+        options: {
+          minimize: false,
+        },
       },
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          // // Extract styles into a separate file
-          // MiniCssExtractPlugin.loader,
-          // Inject styles into DOM in <style> tag
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
-        ],
-      },
+
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',

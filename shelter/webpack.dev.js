@@ -16,7 +16,6 @@ module.exports = merge(common, {
   devtool: 'source-map',
 
   devServer: {
-    // watchFiles: ['src/**/*'],
     open: true,
     hot: true,
     port: 'auto',
@@ -24,5 +23,21 @@ module.exports = merge(common, {
       directory: './src',
       watch: true,
     },
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          // Inject styles into DOM in <style> tag
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+    ],
   },
 });
