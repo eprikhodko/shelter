@@ -14,7 +14,7 @@ module.exports = merge(common, {
   output: {
     filename: '[name].[contenthash].js',
     // __dirname means current directory, where webpack.config.js is located
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'shelter'),
     // put images into /dist/assets folder
     assetModuleFilename: 'assets/[hash][ext][query]',
     clean: true,
