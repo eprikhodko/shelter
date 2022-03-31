@@ -1,0 +1,10 @@
+{
+  "rules": { "order/properties-alphabetical-order": null },
+
+  "extends": [
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier",
+    "stylelint-config-prettier-scss"
+  ]
+}

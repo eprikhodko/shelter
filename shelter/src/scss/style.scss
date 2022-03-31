@@ -1,10 +1,10 @@
 $bgcolor: aquamarine;
 
 @font-face {
-  font-family: generalFont;
-  src: url('../assets/fonts/Georgia.ttf') format('truetype');
   font-weight: 400;
+  font-family: generalFont;
   font-style: normal;
+  src: url('../assets/fonts/Georgia.ttf') format('truetype');
 }
 
 html {
@@ -13,26 +13,26 @@ html {
 }
 
 body {
-  background-color: $bgcolor;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   // font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100vh;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  background-color: $bgcolor;
 
   // background: url('../assets/img/1111.png');
 
   h1 {
-    font-size: 72px;
     margin: 0;
+    font-size: 72px;
   }
 
   h2 {
-    font-size: 54px;
     color: #545454;
     font-weight: 400;
+    font-size: 54px;
   }
 }
