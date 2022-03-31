@@ -1,0 +1,38 @@
+$bgcolor: aquamarine;
+
+@font-face {
+  font-weight: 400;
+  font-family: generalFont;
+  font-style: normal;
+  src: url('../assets/fonts/Georgia.ttf') format('truetype');
+}
+
+html {
+  font-family: generalFont;
+  // letter-spacing: 2px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: $bgcolor;
+
+  // background: url('../assets/img/1111.png');
+
+  h1 {
+    margin: 0;
+    font-size: 72px;
+  }
+
+  h2 {
+    color: #545454;
+    font-weight: 400;
+    font-size: 54px;
+  }
+}
