@@ -1,38 +1,18 @@
-$bgcolor: aquamarine;
-
-@font-face {
-  font-weight: 400;
-  font-family: generalFont;
-  font-style: normal;
-  src: url('../assets/fonts/Georgia.ttf') format('truetype');
+* {
+  box-sizing: border-box;
 }
 
+/* set base font size to 10px */
 html {
-  font-family: generalFont;
-  // letter-spacing: 2px;
+  /* 62.5% of 16px base font size is 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  // font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: $bgcolor;
-
-  // background: url('../assets/img/1111.png');
-
-  h1 {
-    margin: 0;
-    font-size: 72px;
-  }
-
-  h2 {
-    color: #545454;
-    font-weight: 400;
-    font-size: 54px;
-  }
+  color: $dark;
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-family: Arial, Verdana, sans-serif;
+  line-height: 1.6;
 }
