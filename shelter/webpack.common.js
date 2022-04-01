@@ -66,6 +66,7 @@ module.exports = {
         // https://webpack.js.org/guides/asset-modules/#custom-output-filename
         generator: {
           filename: 'assets/fonts/[hash][ext][query]',
+          // filename: 'assets/fonts/[name][ext][query]',
         },
       },
     ],

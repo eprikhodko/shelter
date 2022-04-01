@@ -10,9 +10,9 @@ html {
 }
 
 body {
-  color: $dark;
+  color: $color-dark-xl;
   font-weight: 400;
   font-size: 1.5rem;
-  font-family: Arial, Verdana, sans-serif;
+  font-family: $arial-font;
   line-height: 1.6;
 }
