@@ -1,14 +1,33 @@
-.header-logo-title {
+.header {
+  background: black;
+}
+
+.logo__title {
+  margin: 0;
   color: $color-primary;
   font-weight: 400;
   font-size: 3.2rem;
   font-family: $georgia-font;
   font-style: normal;
+  //   line-height: 35px;
+  //   line-height: 110%;
+  line-height: 1.1;
+  //   letter-spacing: 1px;
+  letter-spacing: 0.06em;
+  //   letter-spacing: 2.1px;
 }
 
-.logo-subtitle {
+.header-logo-subtitle {
+  margin: 0;
   color: $color-light-xl;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1.3rem;
   font-family: $arial-font;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  //   letter-spacing: 1.5px;
+}
+
+.header-nav-list {
+  display: flex;
 }
