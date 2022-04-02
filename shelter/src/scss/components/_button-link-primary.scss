@@ -8,4 +8,9 @@
   letter-spacing: 0.06em;
   text-decoration: none;
   background: $color-primary;
+  border-radius: 100px;
+
+  &:hover {
+    background: $color-primary-light;
+  }
 }

@@ -15,7 +15,7 @@
         <div class="logo">
           <!-- что это? это элемент блока logo, title -->
           <h1 class="logo__title">Cozy House</h1>
-          <h2 class="logo__subtitle">Shelter for pets in Boston</h2>
+          <p class="logo__subtitle">Shelter for pets in Boston</p>
         </div>
 
         <!-- что это? это блок header-nav -->
@@ -25,7 +25,9 @@
             <!-- что это? это элемент блока nav-list, так как это составная часть блока nav-list, которая не может использоваться в отрыве от блока nav-list. Элемент — всегда часть блока, а не другого элемента. -->
             <li class="nav-list__item">
               <!-- что это? это тоже элемент блока nav-list, так как это составная часть блока nav-list, которая не может использоваться в отрыве от блока nav-list. Элемент — всегда часть блока, а не другого элемента. -->
-              <a class="nav-list__link" href="index.html">About the shelter</a>
+              <a class="nav-list__link nav-list__link_active" href="index.html"
+                >About the shelter</a
+              >
             </li>
             <li class="nav-list__item">
               <a class="nav-list__link" href="pets.html">Our pets</a>
@@ -43,13 +45,22 @@
     <main class="main">
       <div class="wrapper">
         <section class="hero">
-          <h3 class="hero__heading">Not only people need a house</h3>
-          <p class="hero__subheading">
-            We offer to give a chance to a little and nice puppy with an
-            extremely wide and open heart. He or she will love you more than
-            anybody else in the world, you will see!
-          </p>
-          <a class="button-link-primary" href="#our-friends"> Make a friend </a>
+          <div class="hero__content">
+            <h2 class="hero__heading">Not only people need a house</h2>
+            <p class="hero__subheading">
+              We offer to give a chance to a little and nice puppy with an
+              extremely wide and open heart. He or she will love you more than
+              anybody else in the world, you will see!
+            </p>
+            <a class="button-link-primary" href="#our-friends">
+              Make a friend
+            </a>
+          </div>
+          <img
+            src="../../assets/img/start-screen-puppy.png"
+            alt="cute little puppy looking upwards"
+            class="hero__image"
+          />
         </section>
       </div>
     </main>

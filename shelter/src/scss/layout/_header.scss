@@ -1,5 +1,5 @@
 .header {
-  background: black;
+  // background: black;
 }
 
 .logo__title {
@@ -44,4 +44,9 @@
   font-family: $arial-font;
   line-height: 1.6;
   text-decoration: none;
+}
+
+.nav-list__link_active {
+  color: $color-light-s;
+  border-bottom: 3px solid $color-primary;
 }
