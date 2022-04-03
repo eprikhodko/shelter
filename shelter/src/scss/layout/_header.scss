@@ -53,6 +53,10 @@
   font-family: $arial-font;
   line-height: 1.6;
   text-decoration: none;
+
+  &:hover {
+    color: $color-light-s;
+  }
 }
 
 .nav-list__link_active {
