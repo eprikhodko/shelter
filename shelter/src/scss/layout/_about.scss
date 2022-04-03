@@ -1,0 +1,24 @@
+.about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5em;
+
+  &__content {
+    max-width: 430px;
+    margin-left: 7.5em;
+  }
+
+  &__heading {
+    @include h3;
+    max-width: 370px;
+    margin-top: 0.4em;
+    color: $color-dark-l;
+  }
+
+  &__subheading {
+    @include paragraph-l;
+    margin-top: 1.666em;
+    color: $color-dark-xl;
+  }
+}
