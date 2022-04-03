@@ -2,7 +2,6 @@
   position: absolute;
   top: 3.75em;
   width: 100%;
-  // background: wheat;
 }
 
 .logo__title {
@@ -12,12 +11,8 @@
   font-size: 3.2rem;
   font-family: $georgia-font;
   font-style: normal;
-  //   line-height: 35px;
-  //   line-height: 110%;
-  line-height: 1.1;
-  //   letter-spacing: 1px;
+  line-height: 1.1; // same as line-height: 110%;
   letter-spacing: 0.06em;
-  // letter-spacing: 2.1px;
 }
 
 .logo__subtitle {
@@ -30,7 +25,6 @@
   line-height: 1;
   letter-spacing: 0.1em;
   text-align: center;
-  //   letter-spacing: 1.5px;
 }
 
 .header__nav {
