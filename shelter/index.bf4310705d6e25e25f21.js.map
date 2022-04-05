@@ -1,1 +1,1 @@
-{"version":3,"file":"index.bf4310705d6e25e25f21.js","mappings":";;;AAA+B;;AAE/B","sources":["webpack://shelter/./src/pages/main/main.js"],"sourcesContent":["import '../../scss/style.scss';\n\nconsole.log('hello, this is main page');\n"],"names":[],"sourceRoot":""}
+{"version":3,"file":"index.bf4310705d6e25e25f21.js","mappings":";;;AAA8B;;AAE9B","sources":["webpack://shelter/./src/pages/main/main.js"],"sourcesContent":["import '../../scss/main.scss';\n\nconsole.log('hello, this is main page');\n"],"names":[],"sourceRoot":""}
