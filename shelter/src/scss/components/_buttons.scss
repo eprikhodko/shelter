@@ -1,0 +1,32 @@
+@mixin button-primary {
+  display: block;
+  padding: 0.882em 2.647em;
+  color: $color-dark-3xl;
+  font-size: 1.7rem;
+  font-family: $georgia-font;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-primary-light;
+  }
+}
+
+.button-link-primary {
+  @include button-primary;
+  background: $color-primary;
+}
+
+.button-secondary {
+  @include button-primary;
+  background: $color-light-xl;
+  box-shadow: inset 0 0 0 2px $color-primary;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
