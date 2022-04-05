@@ -30,3 +30,34 @@
     box-shadow: none;
   }
 }
+
+.button-arrow {
+  display: flex;
+  padding: 1.4375em 1.1875em;
+  background: $color-light-xl;
+  border: none;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 2px $color-primary;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-primary-light;
+    box-shadow: none;
+  }
+}
+
+.button-arrow-right {
+  display: flex;
+  padding: 1.4375em 1.1875em;
+  background: $color-light-xl;
+  border: none;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 2px $color-primary;
+  transform: rotate(180deg);
+  cursor: pointer;
+
+  &:hover {
+    background: $color-primary-light;
+    box-shadow: none;
+  }
+}
