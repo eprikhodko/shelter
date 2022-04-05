@@ -1,0 +1,29 @@
+.help {
+  @include flex-column;
+
+  &__heading {
+    @include h3;
+    color: $color-dark-l;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+.help-list {
+  display: grid;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item-name {
+    @include h4;
+    margin-top: 1.5em;
+  }
+}
