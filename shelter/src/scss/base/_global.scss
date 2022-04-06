@@ -4,7 +4,7 @@
 
 /* set base font size to 10px */
 html {
-  /* 62.5% of 16px base font size is 10px */
+  /* 62.5% of 16px base font size is 10px. 1 rem now is 10px, because 16px times .625 = 10px */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }

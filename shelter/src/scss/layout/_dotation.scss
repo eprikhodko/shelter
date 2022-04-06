@@ -1,0 +1,51 @@
+.donation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__image {
+    // max-width: 100%;
+  }
+
+  &__content {
+    // display: flex;
+    // flex-direction: column;
+    max-width: 380px;
+    margin-left: 1.875em;
+  }
+
+  &__heading {
+    @include h3;
+    color: $color-dark-l;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__subheading {
+    @include h5;
+    margin-top: 1.333em;
+    color: $color-dark-l;
+  }
+
+  &__credit-card-content {
+    display: flex;
+    align-items: center;
+    max-width: 349px;
+    margin-top: 1.25em;
+    background: $color-primary;
+    border-radius: 9px;
+  }
+
+  &__credit-card-icon {
+    padding: 0.625em 0.9375em;
+  }
+
+  &__credit-card-number {
+    @include h4;
+    color: $color-dark-l;
+  }
+}
