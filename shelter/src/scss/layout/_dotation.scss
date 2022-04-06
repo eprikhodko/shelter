@@ -3,9 +3,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-bottom: rem(87px);
 
   &__image {
     // max-width: 100%;
+    // border: 1px solid;
+    margin-bottom: rem(10px);
   }
 
   &__content {
@@ -47,5 +50,15 @@
   &__credit-card-number {
     @include h4;
     color: $color-dark-l;
+  }
+
+  &__legal-information {
+    margin-top: rem(20px);
+    color: $color-dark-m;
+    font-weight: 400;
+    font-size: rem(12px);
+    font-family: $arial-font;
+    font-style: italic;
+    line-height: 1.5;
   }
 }
