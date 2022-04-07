@@ -23,12 +23,10 @@
     margin-bottom: rem(60px);
   }
 
-  &__email,
-  &__phone,
-  &__address-boston,
-  &__address-london {
+  &__link {
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
 
   &__title {
