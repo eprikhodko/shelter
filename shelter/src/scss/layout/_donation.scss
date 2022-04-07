@@ -6,14 +6,10 @@
   margin-bottom: rem(88px);
 
   &__image {
-    // max-width: 100%;
-    // border: 1px solid;
     margin-bottom: rem(10px);
   }
 
   &__content {
-    // display: flex;
-    // flex-direction: column;
     max-width: 380px;
     margin-left: 1.875em;
   }
@@ -49,7 +45,11 @@
 
   &__credit-card-number {
     @include h4;
+  }
+
+  &__credit-card-link {
     color: $color-dark-l;
+    text-decoration: none;
   }
 
   &__legal-information {
