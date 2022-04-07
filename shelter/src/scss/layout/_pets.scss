@@ -3,6 +3,7 @@
 
   &__heading {
     @include h3;
+    margin-top: 1px;
     color: $color-dark-l;
     text-align: center;
 

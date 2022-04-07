@@ -55,22 +55,42 @@
   transform: rotate(180deg);
 }
 
-.button-page-number {
-  @include h4;
+@mixin button-pagination {
   display: flex;
   align-items: center;
   justify-content: center;
   width: rem(52px);
   height: rem(52px);
-  // padding: 1.4375em 1.1875em;
-  background: $color-primary;
+  // background: $background;
   border: none;
   border-radius: 100px;
   // box-shadow: inset 0 0 0 2px $color-primary;
   cursor: pointer;
+}
+
+.button-pagination {
+  @include h4;
+  @include button-pagination;
 
   // &:hover {
   //   background: $color-primary-light;
   //   box-shadow: none;
   // }
+}
+
+.button_page-number {
+  background: $color-primary;
+}
+
+.button-pagination-secondary {
+  @include h4;
+  @include button-pagination;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px $color-primary;
+}
+
+.button-pagination-secondary_disabled {
+  color: $color-dark-s;
+  box-shadow: inset 0 0 0 2px $color-dark-s;
+  cursor: default;
 }
