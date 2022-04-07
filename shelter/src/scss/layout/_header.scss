@@ -1,3 +1,56 @@
+@mixin logo-title($color) {
+  margin: 0;
+  color: $color;
+  font-weight: 400;
+  font-size: rem(32px);
+  font-family: $georgia-font;
+  font-style: normal;
+  line-height: 1.1; // same as line-height: 110%;
+  letter-spacing: 0.06em;
+}
+
+@mixin logo-subtitle($color) {
+  margin: 0;
+  margin-top: 0.769em;
+  color: $color;
+  font-weight: 400;
+  font-size: rem(13px);
+  font-family: $arial-font;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+@mixin header-nav {
+  width: 100%;
+  max-width: 443px;
+}
+
+@mixin nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin nav-list-link($color, $hover-color) {
+  padding-bottom: 0.25em;
+  color: $color;
+  font-size: rem(15px);
+  font-family: $arial-font;
+  line-height: 1.6;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+@mixin nav-list-link_active($color, $border-bottom-color) {
+  color: $color;
+  border-bottom: 3px solid $border-bottom-color;
+}
+
 .main-header {
   position: absolute;
   top: 3.75em;
@@ -8,58 +61,60 @@
   }
 
   &__logo-title {
-    margin: 0;
-    color: $color-primary;
-    font-weight: 400;
-    font-size: rem(32px);
-    font-family: $georgia-font;
-    font-style: normal;
-    line-height: 1.1; // same as line-height: 110%;
-    letter-spacing: 0.06em;
+    @include logo-title($color-primary);
   }
 
   &__logo-subtitle {
-    margin: 0;
-    margin-top: 0.769em;
-    color: $color-light-xl;
-    font-weight: 400;
-    font-size: rem(13px);
-    font-family: $arial-font;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    text-align: center;
+    @include logo-subtitle($color-light-xl);
   }
-}
 
-.header-nav {
-  width: 100%;
-  max-width: 443px;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-list__link {
-  padding-bottom: 0.25em;
-  color: $color-dark-s;
-  font-size: rem(15px);
-  font-family: $arial-font;
-  line-height: 1.6;
-  text-decoration: none;
-
-  &:hover {
-    color: $color-light-s;
+  &__header-nav {
+    @include header-nav;
   }
-}
 
-.nav-list__link_active {
-  color: $color-light-s;
-  border-bottom: 3px solid $color-primary;
+  &__nav-list {
+    @include nav-list;
+  }
+
+  &__nav-list-link {
+    @include nav-list-link($color-dark-s, $color-light-s);
+  }
+
+  .nav-list-link_active {
+    @include nav-list-link_active($color-light-s, $color-primary);
+  }
 }
 
 .pets-header {
+  &__wrapper {
+    padding: rem(30px) 0;
+  }
+
+  &__logo-link {
+    text-decoration: none;
+  }
+
+  &__logo-title {
+    @include logo-title($color-dark-l);
+  }
+
+  &__logo-subtitle {
+    @include logo-subtitle($color-dark-3xl);
+  }
+
+  &__header-nav {
+    @include header-nav;
+  }
+
+  &__nav-list {
+    @include nav-list;
+  }
+
+  &__nav-list-link {
+    @include nav-list-link($color-dark-l, $color-dark-3xl);
+  }
+
+  .nav-list-link_active {
+    @include nav-list-link_active($color-dark-l, $color-primary);
+  }
 }
