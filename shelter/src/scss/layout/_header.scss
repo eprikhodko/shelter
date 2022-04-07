@@ -86,6 +86,10 @@
 }
 
 .pets-header {
+  position: sticky;
+  top: 0;
+  background: $color-light-xl;
+
   &__wrapper {
     padding: rem(30px) 0;
   }
