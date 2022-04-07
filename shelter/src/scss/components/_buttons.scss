@@ -23,7 +23,7 @@
 
 .button-secondary {
   @include button-primary;
-  background: $color-light-xl;
+  background: transparent;
   box-shadow: inset 0 0 0 2px $color-primary;
 
   &:hover {

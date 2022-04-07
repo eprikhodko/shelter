@@ -30,11 +30,13 @@
     color: $color-dark-l;
   }
 
-  &__credit-card-content {
+  &__credit-card-link {
     display: flex;
     align-items: center;
     max-width: 349px;
     margin-top: 1.25em;
+    color: $color-dark-l;
+    text-decoration: none;
     background: $color-primary;
     border-radius: 9px;
   }
@@ -45,11 +47,6 @@
 
   &__credit-card-number {
     @include h4;
-  }
-
-  &__credit-card-link {
-    color: $color-dark-l;
-    text-decoration: none;
   }
 
   &__legal-information {
