@@ -14,12 +14,19 @@
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    margin-top: rem(60px);
+    margin: rem(60px) 0;
     column-gap: rem(40px);
     row-gap: rem(30px);
   }
 
-  &__button {
-    margin-top: 3.529em;
+  //   &__button {
+  //     margin-top: 3.529em;
+  //   }
+
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 340px;
   }
 }
