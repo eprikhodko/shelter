@@ -1,8 +1,10 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 40px;
+  // border: 1px solid salmon;
 
   &__section {
     margin-top: rem(80px);
