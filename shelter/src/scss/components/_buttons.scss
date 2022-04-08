@@ -61,21 +61,14 @@
   justify-content: center;
   width: rem(52px);
   height: rem(52px);
-  // background: $background;
   border: none;
   border-radius: 100px;
-  // box-shadow: inset 0 0 0 2px $color-primary;
   cursor: pointer;
 }
 
 .button-pagination {
   @include h4;
   @include button-pagination;
-
-  // &:hover {
-  //   background: $color-primary-light;
-  //   box-shadow: none;
-  // }
 }
 
 .button_page-number {
