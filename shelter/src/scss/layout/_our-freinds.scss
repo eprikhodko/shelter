@@ -21,6 +21,11 @@
     display: flex;
     gap: 5.625em;
     margin: 0 3.3125em;
+
+    @media (max-width: $screen-medium) {
+      gap: rem(40px);
+      margin: 0 rem(12px);
+    }
   }
 
   &__button {
