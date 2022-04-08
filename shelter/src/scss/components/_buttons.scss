@@ -70,15 +70,16 @@
 .button-page-number {
   @include h4;
   @include button-pagination($color-primary);
+  cursor: default;
 }
 
-.button-pagination-secondary {
+.button-pagination {
   @include h4;
   @include button-pagination(transparent);
   box-shadow: inset 0 0 0 2px $color-primary;
 }
 
-.button-pagination-secondary_disabled {
+.button-pagination_disabled {
   color: $color-dark-s;
   box-shadow: inset 0 0 0 2px $color-dark-s;
   cursor: default;
