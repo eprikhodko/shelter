@@ -55,30 +55,26 @@
   transform: rotate(180deg);
 }
 
-@mixin button-pagination {
+@mixin button-pagination($background) {
   display: flex;
   align-items: center;
   justify-content: center;
   width: rem(52px);
   height: rem(52px);
+  background: $background;
   border: none;
   border-radius: 100px;
   cursor: pointer;
 }
 
-.button-pagination {
+.button-page-number {
   @include h4;
-  @include button-pagination;
-}
-
-.button_page-number {
-  background: $color-primary;
+  @include button-pagination($color-primary);
 }
 
 .button-pagination-secondary {
   @include h4;
-  @include button-pagination;
-  background: transparent;
+  @include button-pagination(transparent);
   box-shadow: inset 0 0 0 2px $color-primary;
 }
 
