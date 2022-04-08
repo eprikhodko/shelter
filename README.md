@@ -15,4 +15,4 @@ Private repository for @eprikhodko
 
 ## Выполненные задания
 
-- Shelter, неделя 1. Ссылка на деплой: [https://rolling-scopes-school.github.io/eprikhodko-JSFE2022Q1/shelter/](https://rolling-scopes-school.github.io/eprikhodko-JSFE2022Q1/shelter/)
+- Shelter. Desktop. Ссылка на деплой: [https://rolling-scopes-school.github.io/eprikhodko-JSFE2022Q1/shelter/](https://rolling-scopes-school.github.io/eprikhodko-JSFE2022Q1/shelter/)
