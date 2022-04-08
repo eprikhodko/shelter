@@ -10,4 +10,8 @@
     margin-top: rem(80px);
     margin-bottom: rem(100px);
   }
+
+  @media (max-width: $screen-medium) {
+    padding: 0 30px;
+  }
 }
