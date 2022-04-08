@@ -5,13 +5,25 @@
   width: 100%;
   margin-bottom: rem(88px);
 
+  @media (max-width: $screen-medium) {
+    flex-direction: column-reverse;
+  }
+
   &__image {
     margin-bottom: rem(10px);
+
+    @media (max-width: $screen-medium) {
+      margin-top: rem(50px);
+    }
   }
 
   &__content {
     max-width: 380px;
     margin-left: 1.875em;
+
+    @media (max-width: $screen-medium) {
+      margin-left: 0;
+    }
   }
 
   &__heading {
