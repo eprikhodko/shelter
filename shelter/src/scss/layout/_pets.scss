@@ -1,5 +1,7 @@
 .pets {
   @include flex-column;
+  margin-top: rem(80px);
+  margin-bottom: rem(75px);
 
   &__heading {
     @include h3;
@@ -31,5 +33,9 @@
     justify-content: space-between;
     width: 100%;
     max-width: 340px;
+
+    @media (max-width: $screen-medium) {
+      margin-top: rem(10px);
+    }
   }
 }
