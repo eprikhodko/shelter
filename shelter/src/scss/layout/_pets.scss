@@ -18,6 +18,12 @@
     margin: rem(60px) 0;
     column-gap: rem(40px);
     row-gap: rem(30px);
+
+    @media (max-width: $screen-medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: rem(30px) 0;
+    }
   }
 
   &__pagination {
