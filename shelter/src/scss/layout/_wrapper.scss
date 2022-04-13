@@ -11,7 +11,7 @@
     margin-bottom: rem(100px);
   }
 
-  // @media (max-width: $screen-medium) {
-  //   padding: 0 30px;
-  // }
+  @media (max-width: $screen-small) {
+    padding: 0 10px;
+  }
 }

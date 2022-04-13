@@ -19,12 +19,25 @@
     @media (max-width: $screen-medium) {
       margin-top: 0;
     }
+
+    @media (max-width: $screen-small) {
+      align-items: center;
+    }
   }
 
   &__heading {
     @include h2;
     max-width: 310px;
     color: $color-light-xl;
+
+    span {
+      display: block;
+    }
+
+    @media (max-width: $screen-small) {
+      @include h3-mobile;
+      text-align: center;
+    }
   }
 
   &__subheading {
@@ -32,6 +45,10 @@
     max-width: 460px;
     margin-top: 2.8em;
     color: $color-dark-s;
+
+    @media (max-width: $screen-small) {
+      text-align: center;
+    }
   }
 
   &__button {
@@ -47,6 +64,10 @@
       align-self: flex-end;
       max-width: 569px;
       margin-top: rem(100px);
+    }
+
+    @media (max-width: $screen-small) {
+      max-width: 88%;
     }
   }
 }
