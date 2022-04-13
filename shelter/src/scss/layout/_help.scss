@@ -1,6 +1,10 @@
 .help {
   @include flex-column;
 
+  @media (max-width: $screen-small) {
+    padding: 0 rem(5px);
+  }
+
   &__heading {
     @include h3;
     color: $color-dark-l;
@@ -8,6 +12,10 @@
 
     span {
       display: block;
+    }
+
+    @media (max-width: $screen-small) {
+      @include h3-mobile;
     }
   }
 }
@@ -31,6 +39,12 @@
     column-gap: 0;
   }
 
+  @media (max-width: $screen-small) {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: rem(45px);
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -40,5 +54,16 @@
   &__item-name {
     @include h4;
     margin-top: 1.5em;
+
+    @media (max-width: $screen-small) {
+      @include h5;
+      margin-top: rem(20px);
+    }
+  }
+
+  &__image {
+    @media (max-width: $screen-small) {
+      height: 50px;
+    }
   }
 }
