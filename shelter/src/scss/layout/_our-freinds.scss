@@ -9,12 +9,36 @@
     span {
       display: block;
     }
+
+    @media (max-width: $screen-small) {
+      @include h3-mobile;
+    }
   }
 
   &__slider {
     display: flex;
     align-items: center;
     margin-top: 3.75em;
+
+    @media (max-width: $screen-small) {
+      display: grid;
+
+      .button-arrow-left,
+      .button-arrow-right {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        // order: 1;
+        // order: unset;
+      }
+
+      .button-arrow-left {
+        justify-self: start;
+      }
+
+      .button-arrow-right {
+        justify-self: end;
+      }
+    }
   }
 
   &__cards {
@@ -44,7 +68,3 @@
     margin-top: 3.529em;
   }
 }
-
-// .card:nth-child(3) {
-//   background: green;
-// }

@@ -17,6 +17,11 @@
   letter-spacing: 0.06em;
 }
 
+@mixin h3-mobile {
+  @include h3;
+  font-size: rem(25px);
+}
+
 @mixin h4 {
   margin: 0;
   font-weight: 400;
