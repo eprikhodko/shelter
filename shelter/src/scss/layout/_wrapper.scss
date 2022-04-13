@@ -9,6 +9,10 @@
   &__section {
     margin-top: rem(80px);
     margin-bottom: rem(100px);
+
+    @media (max-width: $screen-small) {
+      margin: rem(42px) 0;
+    }
   }
 
   @media (max-width: $screen-small) {

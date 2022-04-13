@@ -22,21 +22,26 @@
 
     @media (max-width: $screen-small) {
       display: grid;
+      // justify-items: center;
+      margin-top: rem(42px);
 
       .button-arrow-left,
       .button-arrow-right {
         grid-row: 3/4;
         grid-column: 1/2;
+        margin-top: rem(20px);
         // order: 1;
         // order: unset;
       }
 
       .button-arrow-left {
         justify-self: start;
+        margin-left: rem(55px);
       }
 
       .button-arrow-right {
         justify-self: end;
+        margin-right: rem(55px);
       }
     }
   }
@@ -66,5 +71,9 @@
 
   &__button {
     margin-top: 3.529em;
+
+    @media (max-width: $screen-small) {
+      margin-top: rem(40px);
+    }
   }
 }
