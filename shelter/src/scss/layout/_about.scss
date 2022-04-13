@@ -5,9 +5,19 @@
   margin-top: 5em;
   margin-bottom: 6.25em;
 
+  @media (max-width: $screen-medium) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   &__content {
     max-width: 430px;
     margin-left: 7.5em;
+
+    @media (max-width: $screen-medium) {
+      margin-bottom: rem(80px);
+      margin-left: 0;
+    }
   }
 
   &__heading {
@@ -15,6 +25,10 @@
     max-width: 370px;
     margin-top: 0.4em;
     color: $color-dark-l;
+
+    @media (max-width: $screen-medium) {
+      margin-top: 0;
+    }
   }
 
   &__subheading {
