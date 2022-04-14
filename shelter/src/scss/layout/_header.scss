@@ -36,7 +36,7 @@
     flex-direction: column;
     align-items: center;
     height: 327px;
-    margin-top: 249px;
+    margin-top: 168px;
   }
 
   // @media (max-width: $screen-small) {
@@ -127,6 +127,20 @@
       width: 320px;
       margin: 0;
       background: $color-dark-3xl;
+    }
+  }
+
+  &__button-close-nav {
+    display: none;
+    align-self: flex-end;
+    margin-top: 45px;
+    margin-right: 46px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    @media (max-width: $screen-small) {
+      display: block;
     }
   }
 
