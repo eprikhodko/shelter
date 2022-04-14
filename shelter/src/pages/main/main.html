@@ -21,7 +21,6 @@
             class="main-header__button-open-nav"
             aria-label="open navigation"
           >
-            <!-- &times; -->
             <img
               src="../../assets/svg/burger.svg"
               alt="burger menu"
@@ -30,17 +29,26 @@
           </button>
 
           <div class="main-header__nav-list-wrapper">
-            <button
-              class="main-header__button-close-nav"
-              aria-label="close navigation"
-            >
-              <!-- &times; -->
-              <img
-                src="../../assets/svg/burger.svg"
-                alt="burger menu"
-                class="main-header__close-nav-image"
-              />
-            </button>
+            <div class="main-header__logo-and-button-container">
+              <div class="main-header__logo main-header__logo_mobile-menu">
+                <a href="index.html" class="main-header__logo-link">
+                  <h1 class="main-header__logo-title">Cozy House</h1>
+                  <p class="main-header__logo-subtitle">
+                    Shelter for pets in Boston
+                  </p>
+                </a>
+              </div>
+              <button
+                class="main-header__button-close-nav"
+                aria-label="close navigation"
+              >
+                <img
+                  src="../../assets/svg/burger.svg"
+                  alt="burger menu"
+                  class="main-header__close-nav-image"
+                />
+              </button>
+            </div>
             <ul class="main-header__nav-list">
               <li class="main-header__nav-list-item">
                 <a
