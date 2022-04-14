@@ -142,14 +142,13 @@
   }
 
   &__button-open-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    // left: 0;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
     display: none;
     align-self: flex-end;
     margin-top: 12px;
-    margin-right: 49px;
+    margin-right: 40px;
     background: transparent;
     border: 0;
     transform: rotate(90deg);
