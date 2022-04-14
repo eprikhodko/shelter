@@ -15,6 +15,11 @@
     @media (max-width: $screen-medium) {
       margin-top: rem(50px);
     }
+
+    @media (max-width: $screen-small) {
+      max-width: 87%;
+      margin-top: 32px;
+    }
   }
 
   &__content {
@@ -23,6 +28,10 @@
 
     @media (max-width: $screen-medium) {
       margin-left: 0;
+    }
+
+    @media (max-width: $screen-small) {
+      padding: 0 10px;
     }
   }
 
@@ -34,12 +43,23 @@
     span {
       display: block;
     }
+
+    @media (max-width: $screen-small) {
+      @include h3-mobile;
+      text-align: center;
+    }
   }
 
   &__subheading {
     @include h5;
     margin-top: 1.333em;
     color: $color-dark-l;
+
+    @media (max-width: $screen-small) {
+      margin-top: rem(25px);
+      letter-spacing: 0;
+      text-align: center;
+    }
   }
 
   &__credit-card-link {
@@ -51,6 +71,10 @@
     text-decoration: none;
     background: $color-primary;
     border-radius: 9px;
+
+    // @media (max-width: $screen-small) {
+    //   max-width: 290px;
+    // }
   }
 
   &__credit-card-icon {
@@ -59,6 +83,10 @@
 
   &__credit-card-number {
     @include h4;
+
+    @media (max-width: $screen-small) {
+      @include h5;
+    }
   }
 
   &__legal-information {
@@ -69,5 +97,9 @@
     font-family: $arial-font;
     font-style: italic;
     line-height: 1.5;
+
+    @media (max-width: $screen-small) {
+      text-align: justify;
+    }
   }
 }
