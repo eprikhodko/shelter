@@ -9,6 +9,10 @@
     flex-direction: column-reverse;
   }
 
+  @media (max-width: $screen-small) {
+    margin-bottom: 30px;
+  }
+
   &__image {
     margin-bottom: rem(10px);
 
