@@ -47,6 +47,15 @@
   line-height: 1.6;
 }
 
+@mixin paragraph-mobile-menu {
+  margin: 0;
+  color: $color-dark-s;
+  font-weight: 400;
+  font-size: rem(32px);
+  font-family: $arial-font;
+  line-height: 1.6;
+}
+
 // Layout
 
 @mixin flex-column {
