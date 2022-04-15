@@ -2,10 +2,10 @@ import '../../scss/main.scss';
 
 console.log('hello, this is main page');
 
-const closeButton = document.querySelector('.main-header__button-close-nav');
-const openButton = document.querySelector('.main-header__button-open-nav');
-const nav = document.querySelector('.main-header__nav-list-wrapper');
-const navItems = document.querySelectorAll('.main-header__nav-list-item');
+const closeButton = document.querySelector('.header-nav__button-close-nav');
+const openButton = document.querySelector('.header-nav__button-open-nav');
+const nav = document.querySelector('.header-nav__nav-list-wrapper');
+const navItems = document.querySelectorAll('.header-nav__nav-list-item');
 const body = document.querySelector('body');
 
 closeButton.addEventListener('click', () => {
@@ -25,5 +25,3 @@ navItems.forEach((item) => {
     body.classList.remove('disable-scroll');
   });
 });
-
-console.log(body);
