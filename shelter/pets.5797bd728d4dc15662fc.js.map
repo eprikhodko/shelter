@@ -1,1 +1,0 @@
-{"version":3,"file":"pets.5797bd728d4dc15662fc.js","mappings":";;;AAA8B;;AAE9B","sources":["webpack://shelter/./src/pages/pets/pets.js"],"sourcesContent":["import '../../scss/main.scss';\n\nconsole.log('hello, this is pets page');\n"],"names":[],"sourceRoot":""}
