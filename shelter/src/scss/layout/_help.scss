@@ -35,8 +35,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+    max-width: 630px;
     margin-top: rem(55px);
-    column-gap: 0;
+    column-gap: 60px;
   }
 
   @media (max-width: $screen-small) {
