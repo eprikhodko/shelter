@@ -22,7 +22,6 @@
 
     @media (max-width: $screen-small) {
       display: grid;
-      // justify-items: center;
       margin-top: rem(42px);
 
       .button-arrow-left,
@@ -30,8 +29,6 @@
         grid-row: 3/4;
         grid-column: 1/2;
         margin-top: rem(20px);
-        // order: 1;
-        // order: unset;
       }
 
       .button-arrow-left {

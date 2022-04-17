@@ -96,9 +96,6 @@
   }
 
   &__button-open-nav {
-    // position: absolute;
-    // top: 0;
-    // right: 0;
     display: none;
     align-self: flex-end;
     margin-top: 12px;
@@ -181,9 +178,6 @@
   &__nav-list-link_active {
     @include nav-list-link_active($color-light-s, $color-primary);
   }
-  // &__nav-list-link_active-dark {
-  //   @include nav-list-link($color-dark-l, $color-dark-3xl);
-  // }
 }
 
 .main-header {
@@ -200,28 +194,4 @@
   position: sticky;
   top: 0;
   background: $color-light-xl;
-
-  // &__logo-link {
-  //   text-decoration: none;
-  // }
-
-  // &__logo-title {
-  //   @include logo-title($color-dark-l);
-  // }
-
-  // &__logo-subtitle {
-  //   @include logo-subtitle($color-dark-3xl);
-  // }
-
-  // &__nav-list {
-  //   @include nav-list;
-  // }
-
-  // &__nav-list-link {
-  //   @include nav-list-link($color-dark-l, $color-dark-3xl);
-  // }
-
-  // .nav-list-link_active {
-  //   @include nav-list-link_active($color-dark-l, $color-primary);
-  // }
 }
