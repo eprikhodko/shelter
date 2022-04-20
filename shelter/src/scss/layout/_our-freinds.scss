@@ -15,7 +15,7 @@
     }
   }
 
-  &__slider {
+  &__carousel-container {
     display: flex;
     align-items: center;
     margin-top: 3.75em;
@@ -43,7 +43,7 @@
     }
   }
 
-  &__cards {
+  &__carousel {
     display: flex;
     gap: 5.625em;
     margin: 0 3.3125em;
