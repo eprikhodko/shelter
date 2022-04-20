@@ -177,7 +177,7 @@
               <span>are looking for a house</span>
             </h3>
             <div class="our-friends__carousel-container">
-              <button class="button-arrow-left">
+              <button class="button-arrow-left" id="btn-left">
                 <svg
                   width="14"
                   height="6"
@@ -190,8 +190,23 @@
               </button>
 
               <div class="our-friends__carousel-wrapper">
-                <div class="our-friends__carousel">
-                  <div class="card">
+                <div class="our-friends__carousel" id="carousel">
+                  <div class="item" id="item-left">
+                    <div class="card">1</div>
+                    <div class="card">1</div>
+                    <div class="card">1</div>
+                  </div>
+                  <div class="item" id="item-active">
+                    <div class="card">2</div>
+                    <div class="card">2</div>
+                    <div class="card">2</div>
+                  </div>
+                  <div class="item" id="item-right">
+                    <div class="card">3</div>
+                    <div class="card">3</div>
+                    <div class="card">3</div>
+                  </div>
+                  <!-- <div class="card">
                     <img
                       src="../../assets/img/pets-katrine.png"
                       alt="britain breed cat"
@@ -225,11 +240,11 @@
                     <button class="button-secondary card__button" type="button">
                       Learn more
                     </button>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
-              <button class="button-arrow-right">
+              <button class="button-arrow-right" id="btn-right">
                 <svg
                   width="14"
                   height="6"

@@ -30,3 +30,29 @@
     margin: 1.85em 0;
   }
 }
+
+.card {
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  font-size: 100px;
+  background: red;
+  cursor: pointer;
+}
+
+.card.activated {
+  background: #ccc;
+}
+
+.item:first-child .card {
+  background: LawnGreen;
+}
+
+.item:last-child .card {
+  background: LightSkyBlue;
+}
+
+.item {
+  gap: 20px;
+}

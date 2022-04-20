@@ -2,6 +2,7 @@ import '../../scss/main.scss';
 
 console.log('hello, this is main page');
 
+// code for burger menu
 const closeButton = document.querySelector('.header-nav__button-close-nav');
 const openButton = document.querySelector('.header-nav__button-open-nav');
 const nav = document.querySelector('.header-nav__nav-list-wrapper');
@@ -24,4 +25,17 @@ navItems.forEach((item) => {
     nav.classList.remove('navigation-open');
     body.classList.remove('disable-scroll');
   });
+});
+
+// code for carousel
+fetch('../../assets/js/pets.json')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+
+const BTN_LEFT = document.querySelector('#btn-left');
+const BTN_RIGHT = document.querySelector('#btn-right');
+const CAROUSEL = document.querySelector('#carousel');
+
+BTN_LEFT.addEventListener('click', () => {
+  CAROUSEL.classList.add('transition-left');
 });

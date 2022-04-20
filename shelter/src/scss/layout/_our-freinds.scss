@@ -43,10 +43,18 @@
     }
   }
 
+  &__carousel-wrapper {
+    width: 640px;
+    overflow: hidden;
+  }
+
   &__carousel {
+    // margin: 0 3.3125em;
+
+    position: relative;
+    left: -640px;
     display: flex;
-    gap: 5.625em;
-    margin: 0 3.3125em;
+    // gap: 5.625em;
 
     @media (max-width: $screen-medium) {
       gap: rem(40px);
@@ -73,4 +81,38 @@
       margin-top: rem(40px);
     }
   }
+}
+
+.item {
+  display: flex;
+}
+
+@keyframes move-right {
+  from {
+    left: -640px;
+  }
+
+  to {
+    left: -1280px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 5s;
+}
+
+@keyframes move-left {
+  from {
+    left: -640px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 5s;
 }
