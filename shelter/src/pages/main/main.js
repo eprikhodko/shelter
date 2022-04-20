@@ -36,6 +36,13 @@ const BTN_LEFT = document.querySelector('#btn-left');
 const BTN_RIGHT = document.querySelector('#btn-right');
 const CAROUSEL = document.querySelector('#carousel');
 
-BTN_LEFT.addEventListener('click', () => {
+const moveLeft = () => {
   CAROUSEL.classList.add('transition-left');
+  BTN_LEFT.removeEventListener('click', moveLeft);
+};
+
+BTN_LEFT.addEventListener('click', moveLeft);
+
+CAROUSEL.addEventListener('animationend', () => {
+  CAROUSEL.classList.remove('transition-left');
 });
