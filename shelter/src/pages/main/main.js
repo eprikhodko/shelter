@@ -45,4 +45,5 @@ BTN_LEFT.addEventListener('click', moveLeft);
 
 CAROUSEL.addEventListener('animationend', () => {
   CAROUSEL.classList.remove('transition-left');
+  BTN_LEFT.addEventListener('click', moveLeft);
 });
