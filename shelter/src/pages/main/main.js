@@ -39,11 +39,13 @@ const CAROUSEL = document.querySelector('#carousel');
 const moveLeft = () => {
   CAROUSEL.classList.add('transition-left');
   BTN_LEFT.removeEventListener('click', moveLeft);
+  BTN_RIGHT.removeEventListener('click', moveRight);
 };
 
 const moveRight = () => {
   CAROUSEL.classList.add('transition-right');
   BTN_RIGHT.removeEventListener('click', moveRight);
+  BTN_LEFT.removeEventListener('click', moveLeft);
 };
 
 BTN_LEFT.addEventListener('click', moveLeft);
