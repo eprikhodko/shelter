@@ -55,6 +55,7 @@
     left: -640px;
     display: flex;
     // gap: 5.625em;
+    // gap: 20px;
 
     @media (max-width: $screen-medium) {
       gap: rem(40px);

@@ -51,8 +51,16 @@ const moveRight = () => {
 BTN_LEFT.addEventListener('click', moveLeft);
 BTN_RIGHT.addEventListener('click', moveRight);
 
-CAROUSEL.addEventListener('animationend', () => {
-  CAROUSEL.classList.remove('transition-left');
+CAROUSEL.addEventListener('animationend', (animationEvent) => {
+  if (animationEvent.animationName === 'move-left') {
+    CAROUSEL.classList.remove('transition-left');
+
+    const leftItems = document.querySelector('#item-left').innerHTML;
+    document.querySelector('#item-active').innerHTML = leftItems;
+  } else {
+    CAROUSEL.classList.remove('transition-right');
+  }
+
   BTN_LEFT.addEventListener('click', moveLeft);
   BTN_RIGHT.addEventListener('click', moveRight);
 });
