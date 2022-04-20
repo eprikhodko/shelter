@@ -41,9 +41,16 @@ const moveLeft = () => {
   BTN_LEFT.removeEventListener('click', moveLeft);
 };
 
+const moveRight = () => {
+  CAROUSEL.classList.add('transition-right');
+  BTN_RIGHT.removeEventListener('click', moveRight);
+};
+
 BTN_LEFT.addEventListener('click', moveLeft);
+BTN_RIGHT.addEventListener('click', moveRight);
 
 CAROUSEL.addEventListener('animationend', () => {
   CAROUSEL.classList.remove('transition-left');
   BTN_LEFT.addEventListener('click', moveLeft);
+  BTN_RIGHT.addEventListener('click', moveRight);
 });
