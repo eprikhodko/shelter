@@ -50,35 +50,35 @@ const ITEM_LEFT = document.querySelector('#item-left');
 const ITEM_RIGHT = document.querySelector('#item-right');
 const ITEM_ACTIVE = document.querySelector('#item-active');
 
-// это мне где надо тогда сгенерировать список трех уникальных ключей? Чтобы мне потом эти ключи передавать в функцию что ли и уже генерировать в цикле самом три уникальных карточки?
-const generateUniquePetsKeys = () => {
-  function shuffle(array) {
-    let currentIndex = array.length,
-      randomIndex;
+// const generateUniquePetsKeys = () => {
+//   function shuffle(array) {
+//     let currentIndex = array.length,
+//       randomIndex;
 
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
+//     // While there remain elements to shuffle.
+//     while (currentIndex != 0) {
+//       // Pick a remaining element.
+//       randomIndex = Math.floor(Math.random() * currentIndex);
+//       currentIndex--;
 
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
-    }
+//       // And swap it with the current element.
+//       [array[currentIndex], array[randomIndex]] = [
+//         array[randomIndex],
+//         array[currentIndex],
+//       ];
+//     }
 
-    return array;
-  }
+//     return array;
+//   }
 
-  // Used like so
-  let arr = [0, 1, 2, 3, 4, 5, 6, 7];
-  shuffle(arr);
-  return shuffle(arr);
-};
+//   // Used like so
+//   let arr = [0, 1, 2, 3, 4, 5, 6, 7];
+//   shuffle(arr);
+//   return shuffle(arr);
+// };
 
-let uniqueNumbers = generateUniquePetsKeys();
+// let uniqueNumbers = generateUniquePetsKeys();
+let uniqueNumbers = [4, 0, 2];
 console.log(uniqueNumbers);
 
 const generateNewNumbersBasedOnOldNumbers = (oldNums) => {
