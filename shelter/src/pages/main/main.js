@@ -28,9 +28,20 @@ navItems.forEach((item) => {
 });
 
 // code for carousel
-fetch('../../assets/js/pets.json')
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+// fetch('../../assets/js/pets.json')
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
+
+const url = '../../assets/js/pets.json';
+async function getData(url) {
+  const response = await fetch(url);
+
+  return response.json();
+}
+
+const data = await getData(url);
+
+console.log(data);
 
 const BTN_LEFT = document.querySelector('#btn-left');
 const BTN_RIGHT = document.querySelector('#btn-right');
@@ -60,6 +71,7 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
     const leftItems = document.querySelector('#item-left').innerHTML;
     document.querySelector('#item-active').innerHTML = leftItems;
 
+    // для карточек животных, когда мы будем добавлять имена животных или ссылки на страницу с животными, это уже будет отдельно для каждой карточки. То есть, мы можем создать восемь функций, которые будут генерировать нам шаблон для восьми различных карточек, но если мы не знаем какие именно данные нам приходят, мы можем подставлять их на момент создания и заполнения новой карточки. В данном случае у нас случайное число, которое мы подставляем индивидуально для каждой карточки, но сам шаблон у нас один на все карточки.
     const createCardTemplate = () => {
       const card = document.createElement('div');
       card.classList.add('card');
