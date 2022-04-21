@@ -60,15 +60,20 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
     const leftItems = document.querySelector('#item-left').innerHTML;
     document.querySelector('#item-active').innerHTML = leftItems;
 
+    const createCardTemplate = () => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      return card;
+    };
+
     // создадим новый элемент
-    const card1 = document.createElement('div');
-    card1.classList.add('card');
+    // внутри дива мы можем создавать разные элементы, например createElementImage, createElementButton, итд, и все это положить внутрь нашего дива при помощи appendChild, нужно не забыть задать новым элементам новые классы.
+    const card1 = createCardTemplate();
     // запишем внутрь этого элемента рандомное число
     card1.innerText = Math.floor(Math.random() * 8);
 
     // создадим новый элемент
-    const card2 = document.createElement('div');
-    card2.classList.add('card');
+    const card2 = createCardTemplate();
     // запишем внутрь этого элемента рандомное число
     card2.innerText = Math.floor(Math.random() * 8);
 
