@@ -96,10 +96,14 @@
   }
 
   &__button-open-nav {
+    // align-self: flex-end;
+    // margin-top: 12px;
+    // margin-right: 40px;
+    position: absolute;
+    top: 12px;
+    right: 49px;
+    z-index: 999;
     display: none;
-    align-self: flex-end;
-    margin-top: 12px;
-    margin-right: 40px;
     background: transparent;
     border: 0;
     transform: rotate(90deg);
