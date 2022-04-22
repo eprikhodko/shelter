@@ -107,6 +107,18 @@
 .transition-right {
   animation-name: move-right;
   animation-duration: 2s;
+
+  @media (max-width: $screen-medium) {
+    @keyframes move-right {
+      from {
+        left: -580px;
+      }
+
+      to {
+        left: -1160px;
+      }
+    }
+  }
 }
 
 @keyframes move-left {
