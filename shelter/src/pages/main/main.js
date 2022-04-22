@@ -160,11 +160,6 @@ const setCentralItem = (petKey) => {
   ITEM_ACTIVE.appendChild(card);
 };
 
-// сгенерируем три карточки для активного айтема во время начальной загрузки страницы
-for (let i = 0; i < 3; i += 1) {
-  setCentralItem(petsNums[i]);
-}
-
 const setLeftItem = (petKey) => {
   const card = createCard(petKey);
 
@@ -176,6 +171,21 @@ const setRightItem = (petKey) => {
 
   ITEM_RIGHT.appendChild(card);
 };
+
+// сгенерируем три карточки для активного айтема во время начальной загрузки страницы
+for (let i = 0; i < 3; i += 1) {
+  setCentralItem(petsNums[i]);
+}
+
+// сгенерируем три карточки для левого айтема во время начальной загрузки страницы
+for (let i = 0; i < 3; i += 1) {
+  setLeftItem(petsNums[i]);
+}
+
+// сгенерируем три карточки для правого айтема во время начальной загрузки страницы
+for (let i = 0; i < 3; i += 1) {
+  setRightItem(petsNums[i]);
+}
 
 CAROUSEL.addEventListener('animationend', (animationEvent) => {
   if (animationEvent.animationName === 'move-left') {
