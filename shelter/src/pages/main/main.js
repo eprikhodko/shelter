@@ -119,7 +119,7 @@ const moveRight = () => {
 BTN_LEFT.addEventListener('click', moveLeft);
 BTN_RIGHT.addEventListener('click', moveRight);
 
-const setCentralItem = (petKey) => {
+const createCard = (petKey) => {
   const createCardTemplate = () => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -127,7 +127,6 @@ const setCentralItem = (petKey) => {
   };
 
   // создадим карточку питомца
-  // внутри дива мы можем создавать разные элементы, например createElementImage, createElementButton, итд, и все это положить внутрь нашего дива при помощи appendChild, нужно не забыть задать новым элементам новые классы.
   const card = createCardTemplate();
 
   // создадим элемент img
@@ -152,81 +151,28 @@ const setCentralItem = (petKey) => {
   buttonLearnMore.innerText = 'Learn more';
   card.appendChild(buttonLearnMore);
 
-  // добавим карточку с питомцев в центральный айтем
+  return card;
+};
+
+const setCentralItem = (petKey) => {
+  const card = createCard(petKey);
+
   ITEM_ACTIVE.appendChild(card);
 };
 
-// сгенерируем три карточки для активного айтема
+// сгенерируем три карточки для активного айтема во время начальной загрузки страницы
 for (let i = 0; i < 3; i += 1) {
   setCentralItem(petsNums[i]);
 }
 
 const setLeftItem = (petKey) => {
-  const createCardTemplate = () => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    return card;
-  };
-
-  // создадим карточку питомца
-  const card = createCardTemplate();
-
-  // создадим элемент img
-  const img = document.createElement('img');
-  img.classList.add('card__image');
-  // зададим элементу img src
-  img.src = petsData[petKey].img;
-  // добавим элемент img внутрь нашей карточки
-  card.appendChild(img);
-
-  // добавим в карточку имя питомца
-  const petName = document.createElement('p');
-  petName.classList.add('card__pet-name');
-  petName.innerText = petsData[petKey].name;
-  card.appendChild(petName);
-
-  // добавим в карточку кнопку learn more
-  const buttonLearnMore = document.createElement('button');
-  buttonLearnMore.type = 'button';
-  buttonLearnMore.classList.add('button-secondary');
-  buttonLearnMore.classList.add('card__button');
-  buttonLearnMore.innerText = 'Learn more';
-  card.appendChild(buttonLearnMore);
+  const card = createCard(petKey);
 
   ITEM_LEFT.appendChild(card);
 };
 
 const setRightItem = (petKey) => {
-  const createCardTemplate = () => {
-    const card = document.createElement('div');
-    card.classList.add('card');
-    return card;
-  };
-
-  // создадим карточку питомца
-  const card = createCardTemplate();
-
-  // создадим элемент img
-  const img = document.createElement('img');
-  img.classList.add('card__image');
-  // зададим элементу img src
-  img.src = petsData[petKey].img;
-  // добавим элемент img внутрь нашей карточки
-  card.appendChild(img);
-
-  // добавим в карточку имя питомца
-  const petName = document.createElement('p');
-  petName.classList.add('card__pet-name');
-  petName.innerText = petsData[petKey].name;
-  card.appendChild(petName);
-
-  // добавим в карточку кнопку learn more
-  const buttonLearnMore = document.createElement('button');
-  buttonLearnMore.type = 'button';
-  buttonLearnMore.classList.add('button-secondary');
-  buttonLearnMore.classList.add('card__button');
-  buttonLearnMore.innerText = 'Learn more';
-  card.appendChild(buttonLearnMore);
+  const card = createCard(petKey);
 
   ITEM_RIGHT.appendChild(card);
 };
