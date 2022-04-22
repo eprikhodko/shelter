@@ -52,6 +52,11 @@
       width: 580px;
       margin: 0 12px;
     }
+
+    @media (max-width: $screen-small) {
+      width: 270px;
+      margin: 0 12px;
+    }
   }
 
   &__carousel {
@@ -75,6 +80,8 @@
     }
 
     @media (max-width: $screen-small) {
+      left: -270px;
+
       .card:nth-last-child(-n + 2) {
         display: none;
       }
@@ -119,6 +126,18 @@
       }
     }
   }
+
+  @media (max-width: $screen-small) {
+    @keyframes move-right {
+      from {
+        left: -270px;
+      }
+
+      to {
+        left: -540px;
+      }
+    }
+  }
 }
 
 @keyframes move-left {
@@ -139,6 +158,18 @@
     @keyframes move-left {
       from {
         left: -580px;
+      }
+
+      to {
+        left: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    @keyframes move-left {
+      from {
+        left: -270px;
       }
 
       to {
