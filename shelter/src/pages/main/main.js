@@ -22,11 +22,20 @@ openButton.addEventListener('click', () => {
   overlayDark.classList.toggle('bg-semi-transparent');
 });
 
+overlayDark.addEventListener('click', () => {
+  nav.classList.remove('navigation-open');
+  body.classList.remove('disable-scroll');
+  openButton.classList.remove('header-nav__button-open-nav_rotate');
+  overlayDark.classList.remove('bg-semi-transparent');
+});
+
 // close mobile nav when user click any item from mobile menu
 navItems.forEach((item) => {
   item.addEventListener('click', () => {
     nav.classList.remove('navigation-open');
     body.classList.remove('disable-scroll');
+    openButton.classList.remove('header-nav__button-open-nav_rotate');
+    overlayDark.classList.remove('bg-semi-transparent');
   });
 });
 
