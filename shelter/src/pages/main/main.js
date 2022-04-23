@@ -4,6 +4,7 @@ console.log('hello, this is main page');
 
 // code for burger menu
 // const closeButton = document.querySelector('.header-nav__button-close-nav');
+const overlayDark = document.querySelector('#overlay-dark');
 const openButton = document.querySelector('.header-nav__button-open-nav');
 const nav = document.querySelector('.header-nav__nav-list-wrapper');
 const navItems = document.querySelectorAll('.header-nav__nav-list-item');
@@ -18,6 +19,7 @@ openButton.addEventListener('click', () => {
   nav.classList.toggle('navigation-open');
   body.classList.toggle('disable-scroll');
   openButton.classList.toggle('header-nav__button-open-nav_rotate');
+  overlayDark.classList.toggle('bg-semi-transparent');
 });
 
 // close mobile nav when user click any item from mobile menu
