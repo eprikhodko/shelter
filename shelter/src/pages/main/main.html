@@ -8,6 +8,8 @@
   </head>
   <body>
     <header class="main-header">
+      <div class="bg-overlay" id="overlay-dark"></div>
+
       <div class="wrapper">
         <div class="logo">
           <a href="index.html" class="logo__link">
@@ -23,14 +25,14 @@
           >
             <svg
               width="30"
-              height="30"
-              viewBox="0 0 30 30"
+              height="22"
+              viewBox="0 0 30 22"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <line x1="24" y1="30" x2="24" stroke="#F1CDB3" stroke-width="2" />
-              <line x1="14" y1="30" x2="14" stroke="#F1CDB3" stroke-width="2" />
-              <line x1="4" y1="30" x2="4" stroke="#F1CDB3" stroke-width="2" />
+              <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2" />
+              <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2" />
+              <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2" />
             </svg>
           </button>
 
@@ -43,7 +45,7 @@
                 </a>
               </div>
 
-              <button
+              <!-- <button
                 class="header-nav__button-close-nav"
                 aria-label="close navigation"
               >
@@ -76,7 +78,7 @@
                     stroke-width="2"
                   />
                 </svg>
-              </button>
+              </button> -->
             </div>
             <ul class="header-nav__nav-list">
               <li class="header-nav__nav-list-item">
@@ -91,7 +93,7 @@
                   >Our pets</a
                 >
               </li>
-              <li class="header-nav_nav-list-item">
+              <li class="header-nav__nav-list-item">
                 <a class="header-nav__nav-list-link" href="#help"
                   >Help the shelter</a
                 >
@@ -176,8 +178,8 @@
               <span>Our friends who</span>
               <span>are looking for a house</span>
             </h3>
-            <div class="our-friends__slider">
-              <button class="button-arrow-left">
+            <div class="our-friends__carousel-container">
+              <button class="button-arrow-left" id="btn-left">
                 <svg
                   width="14"
                   height="6"
@@ -189,45 +191,15 @@
                 </svg>
               </button>
 
-              <div class="our-friends__cards">
-                <div class="card">
-                  <img
-                    src="../../assets/img/pets-katrine.png"
-                    alt="britain breed cat"
-                    class="card__image"
-                  />
-                  <p class="card__pet-name">Katrine</p>
-                  <button class="button-secondary card__button" type="button">
-                    Learn more
-                  </button>
-                </div>
-
-                <div class="card">
-                  <img
-                    src="../../assets/img/pets-jennifer.png"
-                    alt="little puppy"
-                    class="card__image"
-                  />
-                  <p class="card__pet-name">Jennifer</p>
-                  <button class="button-secondary card__button" type="button">
-                    Learn more
-                  </button>
-                </div>
-
-                <div class="card">
-                  <img
-                    src="../../assets/img/pets-woody.png"
-                    alt="golden retrivier laying on the floor"
-                    class="card__image"
-                  />
-                  <p class="card__pet-name">Woody</p>
-                  <button class="button-secondary card__button" type="button">
-                    Learn more
-                  </button>
+              <div class="our-friends__carousel-wrapper">
+                <div class="our-friends__carousel" id="carousel">
+                  <div class="item" id="item-left"></div>
+                  <div class="item" id="item-active"></div>
+                  <div class="item" id="item-right"></div>
                 </div>
               </div>
 
-              <button class="button-arrow-right">
+              <button class="button-arrow-right" id="btn-right">
                 <svg
                   width="14"
                   height="6"

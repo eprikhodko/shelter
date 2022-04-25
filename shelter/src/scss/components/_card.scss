@@ -30,3 +30,18 @@
     margin: 1.85em 0;
   }
 }
+
+.card {
+  align-items: center;
+  justify-content: center;
+  // width: 200px;
+  width: 270px;
+  // height: 200px;
+  font-size: 100px;
+  // background: pink;
+  cursor: pointer;
+}
+
+.card.activated {
+  background: #ccc;
+}

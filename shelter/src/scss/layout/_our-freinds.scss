@@ -15,7 +15,7 @@
     }
   }
 
-  &__slider {
+  &__carousel-container {
     display: flex;
     align-items: center;
     margin-top: 3.75em;
@@ -43,23 +43,45 @@
     }
   }
 
-  &__cards {
-    display: flex;
-    gap: 5.625em;
-    margin: 0 3.3125em;
+  &__carousel-wrapper {
+    width: 990px;
+    margin: 0 53px;
+    overflow: hidden;
 
     @media (max-width: $screen-medium) {
-      gap: rem(40px);
-      margin: 0 rem(12px);
+      width: 580px;
+      margin: 0 12px;
     }
 
+    @media (max-width: $screen-small) {
+      width: 270px;
+      margin: 0 12px;
+    }
+  }
+
+  &__carousel {
+    position: relative;
+    left: -990px;
+    display: flex;
+    // gap: 5.625em;
+    // gap: 20px;
+
+    // @media (max-width: $screen-medium) {
+    //   gap: rem(40px);
+    //   margin: 0 rem(12px);
+    // }
+
     @media (max-width: $screen-medium) {
+      left: -580px;
+
       .card:nth-child(3) {
         display: none;
       }
     }
 
     @media (max-width: $screen-small) {
+      left: -270px;
+
       .card:nth-last-child(-n + 2) {
         display: none;
       }
@@ -72,5 +94,103 @@
     @media (max-width: $screen-small) {
       margin-top: rem(40px);
     }
+  }
+}
+
+.item {
+  display: flex;
+}
+
+@keyframes move-right {
+  from {
+    left: -990px;
+  }
+
+  to {
+    left: -1980px;
+  }
+}
+
+.transition-right {
+  animation-name: move-right;
+  animation-duration: 2s;
+
+  @media (max-width: $screen-medium) {
+    @keyframes move-right {
+      from {
+        left: -580px;
+      }
+
+      to {
+        left: -1160px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    @keyframes move-right {
+      from {
+        left: -270px;
+      }
+
+      to {
+        left: -540px;
+      }
+    }
+  }
+}
+
+@keyframes move-left {
+  from {
+    left: -990px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 2s;
+
+  @media (max-width: $screen-medium) {
+    @keyframes move-left {
+      from {
+        left: -580px;
+      }
+
+      to {
+        left: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    @keyframes move-left {
+      from {
+        left: -270px;
+      }
+
+      to {
+        left: 0;
+      }
+    }
+  }
+}
+
+// .item:first-child .card {
+//   background: LawnGreen;
+// }
+
+// .item:last-child .card {
+//   background: LightSkyBlue;
+// }
+
+.item {
+  gap: 90px;
+
+  @media (max-width: $screen-medium) {
+    gap: 40px;
   }
 }
