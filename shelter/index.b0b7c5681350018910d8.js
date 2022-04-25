@@ -2,10 +2,59 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 935:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/img/4adc29b45d73af8a5eae.png";
+
+/***/ }),
+
+/***/ 693:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/img/5269502cabbe9cef1fd8.png";
+
+/***/ }),
+
 /***/ 53:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "assets/img/3364ec241999219237a3.png";
+
+/***/ }),
+
+/***/ 429:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/img/c3ca2a7750d96d8951e9.png";
+
+/***/ }),
+
+/***/ 884:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/img/ff0f2793f5d298f12e95.png";
+
+/***/ }),
+
+/***/ 283:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/img/2ebd4f75eda98c377265.png";
+
+/***/ }),
+
+/***/ 831:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/img/11f3522dcecba7cd37a5.png";
+
+/***/ }),
+
+/***/ 284:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "assets/img/3a1d03480647f54f4a53.png";
 
 /***/ })
 
@@ -79,7 +128,6 @@ var __webpack_exports__ = {};
 const petsData = [
   {
     name: 'Jennifer',
-    // img: '../../assets/img/pets-jennifer.png',
     img: __webpack_require__(53),
     type: 'Dog',
     breed: 'Labrador',
@@ -92,7 +140,7 @@ const petsData = [
   },
   {
     name: 'Sophia',
-    img: '../../assets/img/pets-sophia.png',
+    img: __webpack_require__(283),
     type: 'Dog',
     breed: 'Shih tzu',
     description:
@@ -104,7 +152,7 @@ const petsData = [
   },
   {
     name: 'Woody',
-    img: '../../assets/img/pets-woody.png',
+    img: __webpack_require__(284),
     type: 'Dog',
     breed: 'Golden Retriever',
     description:
@@ -116,7 +164,7 @@ const petsData = [
   },
   {
     name: 'Scarlett',
-    img: '../../assets/img/pets-scarlett.png',
+    img: __webpack_require__(884),
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
@@ -128,7 +176,7 @@ const petsData = [
   },
   {
     name: 'Katrine',
-    img: '../../assets/img/pets-katrine.png',
+    img: __webpack_require__(429),
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -140,7 +188,7 @@ const petsData = [
   },
   {
     name: 'Timmy',
-    img: '../../assets/img/pets-timmy.png',
+    img: __webpack_require__(831),
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -152,7 +200,7 @@ const petsData = [
   },
   {
     name: 'Freddie',
-    img: '../../assets/img/pets-freddie.png',
+    img: __webpack_require__(693),
     type: 'Cat',
     breed: 'British Shorthair',
     description:
@@ -164,7 +212,7 @@ const petsData = [
   },
   {
     name: 'Charly',
-    img: '../../assets/img/pets-charly.png',
+    img: __webpack_require__(935),
     type: 'Dog',
     breed: 'Jack Russell Terrier',
     description:
@@ -395,4 +443,4 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
 
 /******/ })()
 ;
-//# sourceMappingURL=index.eaa6a04d6327bd7d7fd5.js.map
+//# sourceMappingURL=index.b0b7c5681350018910d8.js.map
