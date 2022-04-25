@@ -48,7 +48,7 @@ navItems.forEach((item) => {
 });
 
 // code for carousel
-const url = '../../assets/js/pets.json';
+const url = '/../../assets/js/pets.json';
 async function getData(url) {
   const response = await fetch(url);
 
@@ -346,4 +346,4 @@ __webpack_async_result__();
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=index.82421c69271311ee43c1.js.map
+//# sourceMappingURL=index.c3043fa6701a028d9187.js.map
