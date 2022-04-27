@@ -1,0 +1,69 @@
+.pets {
+  @include flex-column;
+  margin-top: rem(80px);
+  margin-bottom: rem(100px);
+
+  @media (max-width: $screen-medium) {
+    margin-bottom: 75px;
+  }
+
+  @media (max-width: $screen-small) {
+    margin-top: 45px;
+    margin-bottom: 42px;
+  }
+
+  &__heading {
+    @include h3;
+    margin-top: 1px;
+    color: $color-dark-l;
+    text-align: center;
+
+    @media (max-width: $screen-small) {
+      @include h3-mobile;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(60px) 0;
+    column-gap: rem(40px);
+    row-gap: rem(30px);
+
+    @media (max-width: $screen-medium) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: rem(30px) 0;
+
+      .card:nth-last-child(-n + 2) {
+        display: none;
+      }
+    }
+
+    @media (max-width: $screen-small) {
+      grid-template-columns: 1fr;
+      margin-top: 42px;
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    .card:nth-last-child(-n + 5) {
+      display: none;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 340px;
+
+    @media (max-width: $screen-medium) {
+      margin-top: rem(10px);
+    }
+  }
+}

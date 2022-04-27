@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* 62.5% of 16px base font size is 10px. 1 rem now is 10px, because 16px times .625 = 10px */
+  // font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $color-dark-xl;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: $arial-font;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}

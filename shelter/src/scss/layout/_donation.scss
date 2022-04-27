@@ -1,0 +1,113 @@
+.donation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: rem(88px);
+
+  @media (max-width: $screen-medium) {
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: $screen-small) {
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    margin-bottom: rem(10px);
+
+    @media (max-width: $screen-medium) {
+      margin-top: rem(50px);
+    }
+
+    @media (max-width: $screen-small) {
+      max-width: 87%;
+      margin-top: 32px;
+    }
+  }
+
+  &__content {
+    max-width: 380px;
+    margin-left: 1.875em;
+
+    @media (max-width: $screen-medium) {
+      margin-left: 0;
+    }
+
+    @media (max-width: $screen-small) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10px;
+    }
+  }
+
+  &__heading {
+    @include h3;
+    color: $color-dark-l;
+    text-align: left;
+
+    span {
+      display: block;
+    }
+
+    @media (max-width: $screen-small) {
+      @include h3-mobile;
+      text-align: center;
+    }
+  }
+
+  &__subheading {
+    @include h5;
+    margin-top: 1.333em;
+    color: $color-dark-l;
+
+    @media (max-width: $screen-small) {
+      margin-top: rem(25px);
+      letter-spacing: 0;
+      text-align: center;
+    }
+  }
+
+  &__credit-card-link {
+    display: flex;
+    align-items: center;
+    max-width: 349px;
+    margin-top: 1.25em;
+    color: $color-dark-l;
+    text-decoration: none;
+    background: $color-primary;
+    border-radius: 9px;
+
+    @media (max-width: $screen-small) {
+      margin-top: 22px;
+    }
+  }
+
+  &__credit-card-icon {
+    padding: 0.625em 0.9375em;
+  }
+
+  &__credit-card-number {
+    @include h4;
+
+    @media (max-width: $screen-small) {
+      @include h5;
+      padding-right: 14px;
+    }
+  }
+
+  &__legal-information {
+    margin-top: rem(20px);
+    color: $color-dark-m;
+    font-weight: 400;
+    font-size: rem(12px);
+    font-family: $arial-font;
+    font-style: italic;
+    line-height: 1.5;
+
+    @media (max-width: $screen-small) {
+      text-align: justify;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@mixin button-primary {
+  display: block;
+  padding: 0.882em 2.647em;
+  color: $color-dark-3xl;
+  font-size: rem(17px);
+  font-family: $georgia-font;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-primary-light;
+  }
+}
+
+.button-link-primary {
+  @include button-primary;
+  background: $color-primary;
+}
+
+.button-secondary {
+  @include button-primary;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px $color-primary;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+@mixin button-arrow {
+  display: flex;
+  padding: 1.4375em 1.1875em;
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 2px $color-primary;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-primary-light;
+    box-shadow: none;
+  }
+}
+
+.button-arrow-left {
+  @include button-arrow;
+}
+
+.button-arrow-right {
+  @include button-arrow;
+  transform: rotate(180deg);
+}
+
+@mixin button-pagination($background) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(52px);
+  height: rem(52px);
+  background: $background;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.button-page-number {
+  @include h4;
+  @include button-pagination($color-primary);
+  cursor: default;
+}
+
+.button-pagination {
+  @include h4;
+  @include button-pagination(transparent);
+  box-shadow: inset 0 0 0 2px $color-primary;
+}
+
+.button-pagination_disabled {
+  color: $color-dark-s;
+  box-shadow: inset 0 0 0 2px $color-dark-s;
+  cursor: default;
+}

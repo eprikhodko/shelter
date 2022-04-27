@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-light-s;
+  border-radius: 9px;
+
+  &:hover {
+    background: $color-light-xl;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+    cursor: pointer;
+
+    .button-secondary {
+      background: $color-primary-light;
+      box-shadow: none;
+    }
+  }
+
+  &__pet-name {
+    margin: 0;
+    margin-top: 1.5em;
+    font-weight: 400;
+    font-size: rem(20px);
+    font-family: $georgia-font;
+    line-height: 1;
+    letter-spacing: 0.06em;
+  }
+
+  &__button {
+    margin: 1.85em 0;
+  }
+}
+
+.card {
+  align-items: center;
+  justify-content: center;
+  // width: 200px;
+  width: 270px;
+  // height: 200px;
+  font-size: 100px;
+  // background: pink;
+  cursor: pointer;
+}
+
+.card.activated {
+  background: #ccc;
+}

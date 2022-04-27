@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  // border: 1px solid salmon;
+
+  &__section {
+    margin-top: rem(80px);
+    margin-bottom: rem(100px);
+
+    @media (max-width: $screen-small) {
+      margin: rem(42px) 0;
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    padding: 0 10px;
+  }
+}
+
+.wrapper_pets-header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
