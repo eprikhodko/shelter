@@ -122,9 +122,7 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 
-// import './js/pets.json'
-// import petsData from './js/pets.json';
-
+;// CONCATENATED MODULE: ./src/pages/main/js/petsData.js
 const petsData = [
   {
     name: 'Jennifer',
@@ -224,20 +222,20 @@ const petsData = [
   },
 ];
 
+/* harmony default export */ const js_petsData = (petsData);
+
+;// CONCATENATED MODULE: ./src/pages/main/main.js
+
+
+
 console.log('hello, this is main page');
 
 // code for burger menu
-// const closeButton = document.querySelector('.header-nav__button-close-nav');
 const overlayDark = document.querySelector('#overlay-dark');
 const openButton = document.querySelector('.header-nav__button-open-nav');
 const nav = document.querySelector('.header-nav__nav-list-wrapper');
 const navItems = document.querySelectorAll('.header-nav__nav-list-item');
 const body = document.querySelector('body');
-
-// closeButton.addEventListener('click', () => {
-//   nav.classList.remove('navigation-open');
-//   body.classList.remove('disable-scroll');
-// });
 
 openButton.addEventListener('click', () => {
   nav.classList.toggle('navigation-open');
@@ -262,18 +260,6 @@ navItems.forEach((item) => {
     overlayDark.classList.remove('bg-semi-transparent');
   });
 });
-
-// code for carousel
-// const url = '../../pages/main/js/pets.json';
-// async function getData(url) {
-//   const response = await fetch(url);
-
-//   return response.json();
-// }
-
-// const petsData = await getData(url);
-
-console.log(petsData);
 
 const BTN_LEFT = document.querySelector('#btn-left');
 const BTN_RIGHT = document.querySelector('#btn-right');
@@ -368,14 +354,14 @@ const createCard = (petKey) => {
   const img = document.createElement('img');
   img.classList.add('card__image');
   // зададим элементу img src
-  img.src = petsData[petKey].img;
+  img.src = js_petsData[petKey].img;
   // добавим элемент img внутрь нашей карточки
   card.appendChild(img);
 
   // добавим в карточку имя питомца
   const petName = document.createElement('p');
   petName.classList.add('card__pet-name');
-  petName.innerText = petsData[petKey].name;
+  petName.innerText = js_petsData[petKey].name;
   card.appendChild(petName);
 
   // добавим в карточку кнопку learn more
@@ -443,4 +429,4 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
 
 /******/ })()
 ;
-//# sourceMappingURL=index.b0b7c5681350018910d8.js.map
+//# sourceMappingURL=index.cec47a06c4272bff4d11.js.map
