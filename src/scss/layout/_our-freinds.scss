@@ -15,22 +15,6 @@
     }
   }
 
-  &__carousel-wrapper {
-    width: 990px;
-    margin: 0 53px;
-    overflow: hidden;
-
-    @media (max-width: $screen-medium) {
-      width: 580px;
-      margin: 0 12px;
-    }
-
-    @media (max-width: $screen-small) {
-      width: 270px;
-      margin: 0 12px;
-    }
-  }
-
   &__carousel-container {
     display: flex;
     align-items: center;
@@ -59,28 +43,6 @@
     }
   }
 
-  .carousel {
-    position: relative;
-    left: -990px;
-    display: flex;
-
-    @media (max-width: $screen-medium) {
-      left: -580px;
-
-      .card:nth-child(3) {
-        display: none;
-      }
-    }
-
-    @media (max-width: $screen-small) {
-      left: -270px;
-
-      .card:nth-last-child(-n + 2) {
-        display: none;
-      }
-    }
-  }
-
   &__button {
     margin-top: 3.529em;
 
@@ -88,9 +50,52 @@
       margin-top: rem(40px);
     }
   }
+}
+
+.carousel-wrapper {
+  width: 990px;
+  margin: 0 53px;
+  overflow: hidden;
+
+  @media (max-width: $screen-medium) {
+    width: 580px;
+    margin: 0 12px;
+  }
+
+  @media (max-width: $screen-small) {
+    width: 270px;
+    margin: 0 12px;
+  }
+}
+
+.carousel {
+  position: relative;
+  left: -990px;
+  display: flex;
+
+  @media (max-width: $screen-medium) {
+    left: -580px;
+
+    .card:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $screen-small) {
+    left: -270px;
+
+    .card:nth-last-child(-n + 2) {
+      display: none;
+    }
+  }
 
   &__item {
     display: flex;
+    gap: 90px;
+
+    @media (max-width: $screen-medium) {
+      gap: 40px;
+    }
   }
 }
 
@@ -169,13 +174,5 @@
         left: 0;
       }
     }
-  }
-}
-
-.item {
-  gap: 90px;
-
-  @media (max-width: $screen-medium) {
-    gap: 40px;
   }
 }
