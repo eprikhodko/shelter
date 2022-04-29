@@ -15,6 +15,22 @@
     }
   }
 
+  &__carousel-wrapper {
+    width: 990px;
+    margin: 0 53px;
+    overflow: hidden;
+
+    @media (max-width: $screen-medium) {
+      width: 580px;
+      margin: 0 12px;
+    }
+
+    @media (max-width: $screen-small) {
+      width: 270px;
+      margin: 0 12px;
+    }
+  }
+
   &__carousel-container {
     display: flex;
     align-items: center;
@@ -43,33 +59,10 @@
     }
   }
 
-  &__carousel-wrapper {
-    width: 990px;
-    margin: 0 53px;
-    overflow: hidden;
-
-    @media (max-width: $screen-medium) {
-      width: 580px;
-      margin: 0 12px;
-    }
-
-    @media (max-width: $screen-small) {
-      width: 270px;
-      margin: 0 12px;
-    }
-  }
-
-  &__carousel {
+  .carousel {
     position: relative;
     left: -990px;
     display: flex;
-    // gap: 5.625em;
-    // gap: 20px;
-
-    // @media (max-width: $screen-medium) {
-    //   gap: rem(40px);
-    //   margin: 0 rem(12px);
-    // }
 
     @media (max-width: $screen-medium) {
       left: -580px;
@@ -95,10 +88,10 @@
       margin-top: rem(40px);
     }
   }
-}
 
-.item {
-  display: flex;
+  &__item {
+    display: flex;
+  }
 }
 
 @keyframes move-right {
@@ -178,14 +171,6 @@
     }
   }
 }
-
-// .item:first-child .card {
-//   background: LawnGreen;
-// }
-
-// .item:last-child .card {
-//   background: LightSkyBlue;
-// }
 
 .item {
   gap: 90px;
