@@ -228,7 +228,7 @@ const petsData = [
 
 
 
-console.log('hello, this is main page');
+console.log('hello, this is main page, and this deploy was updated');
 
 // code for burger menu
 const overlayDark = document.querySelector('#overlay-dark');
@@ -429,4 +429,4 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
 
 /******/ })()
 ;
-//# sourceMappingURL=index.cec47a06c4272bff4d11.js.map
+//# sourceMappingURL=index.21e1e0d7a64eb4616e6c.js.map
